@@ -8,10 +8,10 @@
             <br/>
             <input type="text" data-ng-model="name"/> {{ name }}
             <div class="container"
-                data-ng-init="names=['Mark','Michael','Peter','Kathy', 'Charles', 'Nancy']">
+                data-ng-init="customers=[{name:'Mark', city:'North Aurora'},{name:'Michael',city:'Prior Lake'},{name:'Peter',city:'Moorhead'},{name:'Kathy',city:'Stillwater'},{name:'Charles',city:'Detroit Lakes'},{name:'Nancy',city:'Detroit Lakes'},{name:'Kiran',city:'Aurora'},{name:'Vern',city:'Aurora'}]">
                 <h3>looping using AngularJS directives...</h3>
                 <ul>
-                    <li data-ng-repeat="person in names">{{person}}</li>
+                    <li data-ng-repeat="customer in customers | filter:name | orderBy:'city'">{{customer.name}} - {{customer.city}}</li>
                 </ul>
             </div>
             <script src="angular.min.js"></script>
