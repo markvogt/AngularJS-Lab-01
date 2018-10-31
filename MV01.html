@@ -1,0 +1,20 @@
+<html data-ng-app>
+    <head>
+        <title>MV01 AngularJS Lab</title>
+    </head>
+
+    <body>
+            Name: 
+            <br/>
+            <input type="text" data-ng-model="name"/> {{ name }}
+            <div class="container"
+                data-ng-init="names=['Mark','Michael','Peter','Kathy', 'Charles', 'Nancy']">
+                <h3>looping using AngularJS directives...</h3>
+                <ul>
+                    <li data-ng-repeat="person in names">{{person}}</li>
+                </ul>
+            </div>
+            <script src="angular.min.js"></script>
+    </body>
+    
+</html>
